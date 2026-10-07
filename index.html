@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brew Haven Coffee</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">☕ Brew Haven</div>
+
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <button class="cart-btn" onclick="toggleCart()">
+                🛒 Cart <span id="cart-count">0</span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <p class="subtitle">WELCOME TO BREW HAVEN</p>
+            <h1>Good Coffee.<br><span>Good Mood.</span></h1>
+            <p>
+                Freshly roasted coffee, delicious food, and a cozy place
+                to relax with friends.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#menu" class="btn">View Menu</a>
+                <a href="#contact" class="btn secondary">Visit Us</a>
+            </div>
+        </div>
+
+        <div class="coffee-cup">
+            ☕
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features">
+        <div>
+            <span>🌱</span>
+            <h3>Fresh Beans</h3>
+            <p>Premium coffee beans roasted fresh.</p>
+        </div>
+
+        <div>
+            <span>👨‍🍳</span>
+            <h3>Expert Baristas</h3>
+            <p>Crafted with passion and care.</p>
+        </div>
+
+        <div>
+            <span>🏠</span>
+            <h3>Cozy Place</h3>
+            <p>A perfect place to relax and enjoy.</p>
+        </div>
+    </section>
+
+    <!-- Menu -->
+    <section id="menu" class="menu-section">
+        <p class="section-subtitle">OUR MENU</p>
+        <h2>Popular Drinks</h2>
+        <p class="section-description">
+            Choose your favorite drink and add it to your order.
+        </p>
+
+        <div class="menu-grid">
+
+            <div class="menu-card">
+                <div class="menu-image">☕</div>
+                <h3>Classic Espresso</h3>
+                <p>Rich and bold espresso made from premium beans.</p>
+                <div class="menu-bottom">
+                    <strong>₹120</strong>
+                    <button onclick="addToCart('Classic Espresso', 120)">
+                        Add
+                    </button>
+                </div>
+            </div>
+
+            <div class="menu-card">
+                <div class="menu-image">🥛</div>
+                <h3>Creamy Latte</h3>
+                <p>Smooth espresso with creamy steamed milk.</p>
+                <div class="menu-bottom">
+                    <strong>₹160</strong>
+                    <button onclick="addToCart('Creamy Latte', 160)">
+                        Add
+                    </button>
+                </div>
+            </div>
+
+            <div class="menu-card">
+                <div class="menu-image">🍫</div>
+                <h3>Mocha</h3>
+                <p>Chocolate, espresso and steamed milk together.</p>
+                <div class="menu-bottom">
+                    <strong>₹180</strong>
+                    <button onclick="addToCart('Mocha', 180)">
+                        Add
+                    </button>
+                </div>
+            </div>
+
+            <div class="menu-card">
+                <div class="menu-image">🧊</div>
+                <h3>Iced Coffee</h3>
+                <p>Cold, refreshing coffee for a perfect day.</p>
+                <div class="menu-bottom">
+                    <strong>₹150</strong>
+                    <button onclick="addToCart('Iced Coffee', 150)">
+                        Add
+                    </button>
+                </div>
+            </div>
+
+            <div class="menu-card">
+                <div class="menu-image">🥐</div>
+                <h3>Butter Croissant</h3>
+                <p>Freshly baked, crispy and buttery.</p>
+                <div class="menu-bottom">
+                    <strong>₹110</strong>
+                    <button onclick="addToCart('Butter Croissant', 110)">
+                        Add
+                    </button>
+                </div>
+            </div>
+
+            <div class="menu-card">
+                <div class="menu-image">🍰</div>
+                <h3>Chocolate Cake</h3>
+                <p>Soft chocolate cake with rich chocolate cream.</p>
+                <div class="menu-bottom">
+                    <strong>₹190</strong>
+                    <button onclick="addToCart('Chocolate Cake', 190)">
+                        Add
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="about">
+        <div class="about-image">
+            ☕
+        </div>
+
+        <div class="about-content">
+            <p class="section-subtitle">OUR STORY</p>
+            <h2>More Than Just Coffee</h2>
+
+            <p>
+                Brew Haven started with a simple idea: create a place where
+                people can enjoy amazing coffee and feel at home.
+            </p>
+
+            <p>
+                We carefully select our beans, roast them with love, and
+                serve every cup with a smile.
+            </p>
+
+            <a href="#contact" class="btn">Learn More</a>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact">
+        <p class="section-subtitle">COME SAY HELLO</p>
+        <h2>Visit Our Coffee Shop</h2>
+
+        <div class="contact-grid">
+
+            <div>
+                <span>📍</span>
+                <h3>Location</h3>
+                <p>MG Road, Kochi, Kerala</p>
+            </div>
+
+            <div>
+                <span>🕐</span>
+                <h3>Opening Hours</h3>
+                <p>Mon - Sun: 8:00 AM - 10:00 PM</p>
+            </div>
+
+            <div>
+                <span>📞</span>
+                <h3>Call Us</h3>
+                <p>+91 98765 43210</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Cart -->
+    <div id="cart" class="cart">
+        <div class="cart-header">
+            <h2>Your Order</h2>
+            <button onclick="toggleCart()">✕</button>
+        </div>
+
+        <div id="cart-items">
+            <p class="empty-cart">Your cart is empty.</p>
+        </div>
+
+        <div class="cart-footer">
+            <h3>Total: ₹<span id="cart-total">0</span></h3>
+            <button class="checkout-btn" onclick="checkout()">
+                Place Order
+            </button>
+        </div>
+    </div>
+
+    <!-- Overlay -->
+    <div id="overlay" onclick="toggleCart()"></div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="logo">☕ Brew Haven</div>
+        <p>Made with ❤️ and lots of coffee.</p>
+        <p>© 2026 Brew Haven Coffee. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
